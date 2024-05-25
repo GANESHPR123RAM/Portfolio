@@ -7,15 +7,15 @@ import camday from '../Components/asset/camday.jpg';
 function Thought() {
   const slides = [
     {
-      des: "Technology empowers us to innovate, connect, and elevate humanity, but its true value lies in how we wield its potential.",
+      des: "Recognized for exceptional performance as a Marketing volunteer at Cognizance 2023, Asia's second-largest tech fest by IIT Roorkee.",
       img: COGNIZANCE
     },
     {
-      des: "In the digital realm, technology serves as a catalyst for progress, enabling innovation, collaboration, and the realization of human aspirations.",
+      des: "Awarded for exemplary technical management at ChemDay, the chemistry research publication event of IIT Roorkee.",
       img: camday
     },
     {
-      des: "Through technology, we unlock boundless possibilities, bridging distances, sparking creativity, and shaping a brighter future for all.",
+      des: "Recognized for outstanding contribution as a Marketing Executive in NSS IIT Roorkee, promoting social welfare initiatives and fostering community engagement during the fest.",
       img: one
     },
   ];
