@@ -86,7 +86,7 @@ function Homepage() {
           className=" w-[50rem] h-[25rem] sm:h-[30rem]  rounded-xl  relative z-0 ">
           <div className=" w-full h-full p-10 text-4xl text-white font-Quicksand">
             <h1 className='text-2xl sm:text-4xl text-[#FFD308]'>About-me</h1>
-            <h2 className=' text-white text-[0.5rem] leading-3 sm:text-sm md:text-xl mt-5 sm:mt-10'>👋 Hi there! I'm Ganesh Prajapati, a second-year student at IIT Roorkee with a passion for frontend web development. When I'm not buried in code, you can find me actively involved in various groups on campus, such as NSS, CIG, and IARC.
+            <h2 className=' text-white text-[0.5rem] leading-3 sm:text-sm md:text-xl mt-5 sm:mt-10'>👋 Hi there! I'm Ganesh Prajapati, a third-year student at IIT Roorkee with a passion for frontend web development. When I'm not buried in code, you can find me actively involved in various groups on campus, such as NSS, CIG, and IARC, where I serve as the Joint Secretary of Web Development.
               My journey into the world of tech began with a fascination for solving complex problems, particularly in data structures and algorithms. Whether it's crafting elegant user interfaces or tackling algorithmic challenges, I thrive on the creative and analytical aspects of software development.
               Feel free to connect with me to chat about all things tech, collaboration opportunities, or just to share some coding adventures!</h2>
           </div>
