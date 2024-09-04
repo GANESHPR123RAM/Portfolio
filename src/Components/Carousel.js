@@ -13,19 +13,23 @@ function Carousel() {
     { name: 'HTML', percentage: 96 },
     { name: 'CSS', percentage: 96 },
     { name: 'JS', percentage: 90 },
-    { name: 'Responsys Development', percentage: 96 },
+    { name: 'React', percentage: 96 },
+    { name: 'Node js', percentage: 85 },
+    { name: 'Express js', percentage: 85 },
+    { name: 'Mongo DB', percentage: 85 },
+    { name: 'Git/Github', percentage: 85 },
+    { name: 'Responsys Development', percentage: 100 },
     { name: 'Animation', percentage: 90 },
     { name: 'UI/UX', percentage: 85 },
     { name: 'Tailwind CSS', percentage: 90 },
     { name: 'Bootstrap', percentage: 90 },
     { name: 'Figma', percentage: 85 },
-    { name: 'React', percentage: 96 },
     { name: 'C++', percentage: 85 },
     { name: 'Data Structures', percentage: 40 },
   ];
 
-  const firstHalfSkills = skills.slice(0, 6);
-  const secondHalfSkills = skills.slice(6);
+  const firstHalfSkills = skills.slice(0, 8);
+  const secondHalfSkills = skills.slice(8);
 
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
@@ -52,88 +56,45 @@ function Carousel() {
 
   return (
     <>
-      <div className="py-5 w-screen relative">
-        <h1 className='pl-10 text-center absolute z-0 text-8xl md:text-10xl'>Skills</h1>
-
-        <div className="scroller w-screen rotate-12" data-speed="slow">
-          <ul className="tag-list scroller__inner">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>Responsys Development</li>
-            <li>webdev</li>
-            <li>animation</li>
-            <li>UI/UX</li>
-            <li>Tailwind CSS</li>
-            <li>Bootstrap</li>
-            <li>Figma</li>
-            <li>React</li>
-            <li>C++</li>
-            <li>Data Structures</li>
-            <li>Analytics</li>
-          </ul>
-        </div>
-        <div className="scroller -rotate-12" data-direction="right" data-speed="slow">
-          <div className="scroller__inner">
-            <ul className="tag-list scroller__inner">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JS</li>
-              <li>Responsys Development</li>
-              <li>webdev</li>
-              <li>animation</li>
-              <li>UI/UX</li>
-              <li>Tailwind CSS</li>
-              <li>Bootstrap</li>
-              <li>Figma</li>
-              <li>React</li>
-              <li>C++</li>
-              <li>Data Structures</li>
-              <li>Analytics</li>
-            </ul>
+      <div className="w-screen p-10"  style={{ backgroundImage: `url(${ok})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <h1 className='py-5 text-center font-Quicksand text-5xl md:text-6xl'>Skill Meter</h1>
+        <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
+          <div className="flex w-full flex-wrap sm:flex-nowrap">
+            <div className="w-full sm:w-1/2 p-5">
+              <ul className="text-white">
+                {firstHalfSkills.map((skill, index) => (
+                  <li key={index} className="mb-4 font-Quicksand">
+                    {skill.name} <br />
+                    <div className="relative w-full h-3 rounded-lg overflow-hidden bg-gray-300">
+                      <div
+                        className="absolute font-Quicksand top-0 left-0 h-full bg-green-500 transition-all duration-1000"
+                        style={{ width: `${counterOn ? skill.percentage : 0}%` }}
+                      />
+                    </div>
+                    {counterOn && <CountUp start={0} end={skill.percentage} delay={0} />}%
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="w-full sm:w-1/2 p-5">
+              <ul className="text-white">
+                {secondHalfSkills.map((skill, index) => (
+                  <li key={index} className="mb-4 font-Quicksand">
+                    {skill.name} <br />
+                    <div className="relative w-full h-3 rounded-lg overflow-hidden bg-gray-300">
+                      <div
+                        className="absolute font-Quicksand top-0 left-0 h-full bg-green-500 transition-all duration-1000"
+                        style={{ width: `${counterOn ? skill.percentage : 0}%` }}
+                      />
+                    </div>
+                    {counterOn && <CountUp start={0} end={skill.percentage} delay={0} />}%
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
+        </ScrollTrigger>
       </div>
-
-      <div className="w-screen p-10" id="Experience" style={{ backgroundImage: `url(${ok})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <h1 className='py-5 text-center text-5xl md:text-6xl'>Skill Meter</h1>
-      <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
-        <div className="flex w-full flex-wrap sm:flex-nowrap">
-          <div className="w-full sm:w-1/2 p-5">
-            <ul className="text-white">
-              {firstHalfSkills.map((skill, index) => (
-                <li key={index} className="mb-4">
-                  {skill.name} <br />
-                  <div className="relative w-full h-3 rounded-lg overflow-hidden bg-gray-300">
-                    <div
-                      className="absolute top-0 left-0 h-full bg-green-500 transition-all duration-1000"
-                      style={{ width: `${counterOn ? skill.percentage : 0}%` }}
-                    />
-                  </div>
-                  {counterOn && <CountUp start={0} end={skill.percentage} delay={0} />}%
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="w-full sm:w-1/2 p-5">
-            <ul className="text-white">
-              {secondHalfSkills.map((skill, index) => (
-                <li key={index} className="mb-4">
-                  {skill.name} <br />
-                  <div className="relative w-full h-3 rounded-lg overflow-hidden bg-gray-300">
-                    <div
-                      className="absolute top-0 left-0 h-full bg-green-500 transition-all duration-1000"
-                      style={{ width: `${counterOn ? skill.percentage : 0}%` }}
-                    />
-                  </div>
-                  {counterOn && <CountUp start={0} end={skill.percentage} delay={0} />}%
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </ScrollTrigger>
-    </div>
     </>
 
   );

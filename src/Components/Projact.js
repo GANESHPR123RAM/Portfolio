@@ -8,10 +8,10 @@ import Summit from '../Components/asset/Summit.png'
 import deepBlue from '../Components/asset/deepBlue.jpg'
 import marineblue from '../Components/asset/marineblue.jpg'
 import CIG from '../Components/asset/CIG.png'
-import WeatherApp from '../Components/asset/WeatherApp.png'
+import shoppingapp from '../Components/asset/shoppingapp.png'
 import { motion } from 'framer-motion';
 import ok from '../Components/asset/ok.png'
-import {fadeIn} from '../Components/variant'
+import { fadeIn } from '../Components/variant'
 
 function Projact() {
   return (
@@ -21,10 +21,6 @@ function Projact() {
         {Data.map((t, index) => (
           <motion.div
             whileHover={{ scale: 1.025 }}
-            // variants={fadeIn("up",0.2)}
-            // initial="hidden"
-            // whileInView={"show"}
-            // viewport={{once: false, amount: 0.7}}
             className=" w-[90vw] sm:w-[80vw] md:h-[80vh] flex mt-[10vh] bg-[#706f7520] rounded-xl" key={index}>
             <div className="projact_box_1_left rounded-l-[12px] bg-slate-500 w-1/2 flex items-center justify-center p-6" style={{ backgroundImage: `url(${t.Img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <a href={t.link} target="_blank" rel="noopener noreferrer" className=''>
@@ -37,7 +33,7 @@ function Projact() {
             <div className="projact_box_1_right w-1/2 flex flex-col items-start justify-start  p-4 sm:p-6">
               <h1 className=' text-sm sm:text-xl md:text-3xl xl:text-4xl font-bold '>{t.ProjactTitle}</h1>
               <p className=' text-[0.5rem] sm:text-sm mt-5 md:text-[1rem] lg:text-lg md:mt-10  xl:text-xl xl:mt-20'>{t.WebDescripton}</p>
-              <p className=' text-[0.5rem] sm:text-sm mt-3 md:text-[1rem] md:mt-5 lg:text-lg xl:text-xl xl:mt-10'>Link of Web: <a href='' className=' text-blue-500'>{t.WebLink}</a></p>
+              {/* <p className=' text-[0.5rem] sm:text-sm mt-3 md:text-[1rem] md:mt-5 lg:text-lg xl:text-xl xl:mt-10'>Link of Web: <a href='' className=' text-blue-500'>{t.WebLink}</a></p> */}
             </div>
           </motion.div>
         ))}
@@ -51,13 +47,23 @@ export default Projact;
 
 const Data = [
   {
+    Img: darkNight,
+    Content: "Online Shopping App",
+    link: 'https://chotidukanoffical-frontend.onrender.com/',
+    projectIcon: shoppingapp,
+    ProjactTitle: "Chotidukan a Online Shopping App",
+    WebLink: "https://chotidukanoffical-frontend.onrender.com/",
+    WebDescripton:
+      "A dynamic MERN stack project built with React, Node.js, Express.js, and MongoDB, featuring sleek Tailwind CSS styling. This project includes a custom-designed logo, web elements, and content crafted entirely by me, showcasing a seamless and cohesive user experience.",
+  },
+  {
     Img: left,
     Content: "SK SCHOOL",
-    link: 'https://gk-school.netlify.app/Home',
+    link: 'https://gk-school.netlify.app',
     projectIcon: education,
     ProjactTitle: "Sk-School An Educational websites",
     WebDescripton: "Step into the digital realm of SK School, brought to life on January 25, 2024. Designed with HTML, CSS, JavaScript, and React,adorned with Tailwind CSS for a formal touch. it's a dynamic, fully responsive website featuring carousels, modal boxes, active email contact forms, and animated text, ensuring an engaging user experience.",
-    WebLink: "https://gk-school.netlify.app/Home",
+    WebLink: "https://gk-school.netlify.app",
   },
   {
     Img: darkNight,
@@ -69,7 +75,7 @@ const Data = [
     WebDescripton: "Explore the official website of NSS IIT Roorkee, crafted with precision on 14 September 2023. Utilizing HTML, CSS, JavaScript, and React framework, adorned with Bootstrap CSS for a formal touch. Meticulously designed on Figma, presenting an esteemed online presence."
   },
   {
-    Img: deepBlue,
+    Img: left,
     Content: "NSS IIT'R",
     link: 'https://socialsummit.iitr.ac.in/',
     projectIcon: Summit,
@@ -78,7 +84,7 @@ const Data = [
     WebDescripton: "Join the National Social Summit'24 at IIT Roorkee's vibrant website, designed with HTML, CSS, and JavaScript, powered by React and enriched with animations and Bootstrap. Explore a platform fostering positive societal transformations with engaging interface crafted on Figma.",
   },
   {
-    Img: marineblue,
+    Img: darkNight,
     Content: "CIG IIT'R",
     link: 'https://cig-web.netlify.app',
     projectIcon: CIG,
@@ -88,14 +94,4 @@ const Data = [
       "Discover the official website of CIG IIT Roorkee, established on January 4, 2024. CIG fosters interaction with the corporate sector at IIT Roorkee. Crafted using HTML, CSS, JavaScript, and React, it's fully responsive with an intuitive interface. Featuring carousels, modal boxes, active email contact forms, and animated text.",
 
   },
-  // {
-  //   Img: marineblue,
-  //   Content: "Weather App",
-  //   link: 'https://cig-web.netlify.app',
-  //   projectIcon: WeatherApp,
-  //   ProjactTitle: "Weather App With A Real Time API",
-  //   WebLink: "https://gk-school.netlify.app/Home",
-  //   WebDescripton:
-  //     "Stay updated with real-time weather information worldwide on this dynamic website. Utilizing real-time API, Node.js, and Express.js for backend, it offers accurate temperature data, alongside current day, date, and time. Crafted with HTML, CSS, JavaScript, React, and Bootstrap, ensuring seamless user experience on any device.",
-  // },
 ];

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ok from '../Components/asset/ok.png';
 
 const ContactPage = () => {
-  const [result, setResult] = React.useState("send message");
+  const [result, setResult] = React.useState("");
   
   const sendMessage = async (event) => {
     event.preventDefault();
@@ -29,15 +29,15 @@ const ContactPage = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full py-3 min-h-screen" id='Contactus' style={{ backgroundImage: `url(${ok})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mb-4">Get in touch</h2>
-      <form onSubmit={sendMessage} className="w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 bg-transparent p-6 rounded-lg shadow-md">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center font-Quicksand text-white mb-4">Get in touch</h2>
+      <form onSubmit={sendMessage} className="w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 bg-transparent p-6 rounded-lg">
         <input type="hidden" name="apikey" value="fd747826-480e-411d-bca8-ef8405d50217"/>
         <div className="mb-4">
           <input
             type="text"
             name="name"
             placeholder="Your Name"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-2 border font-Quicksand  border-transparent rounded-md focus:outline-none focus:border-blue-500"
             required
           />
         </div>
@@ -46,7 +46,7 @@ const ContactPage = () => {
             type="email"
             name="email"
             placeholder="Your Email"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-2 border font-Quicksand  border-transparent rounded-md focus:outline-none focus:border-blue-500"
             required
           />
         </div>
@@ -54,7 +54,7 @@ const ContactPage = () => {
           <textarea
             name="message"
             placeholder="Your Message"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-2 border font-Quicksand  border-transparent rounded-md focus:outline-none focus:border-blue-500"
             rows="6"
             required
           ></textarea>
@@ -62,13 +62,13 @@ const ContactPage = () => {
         <div className="text-center">
           <button
             type="submit"
-            className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+            className="px-6 py-2 w-full font-Quicksand bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
           >
             Send Message
           </button>
         </div>
       </form>
-      <span className="text-white text-sm mt-2 font-bold">{result}</span>
+      <span className=" py-1 rounded-md px-2 text-sm mt-2 font-Quicksand bg-blue-600 ">{result}</span>
     </div>
   );
 };

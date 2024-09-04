@@ -5,10 +5,8 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
-import Homepage from './Components/Homepage';
 import Navbar from './Components/Navbar'
 import Footer from "./Components/Footer";
-import Contactus from "./Components/Contactus";
 import HomeIndex from "./Components/HomeIndex";
 import Loader from "./Components/Loader/Loader";
 
@@ -21,7 +19,7 @@ function App() {
      const fakeDataFetch = () => {
        setTimeout(() => {
          setIsLoading(false);
-       }, 8000);
+       }, 4000);
      };
  
      fakeDataFetch();

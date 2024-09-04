@@ -1,5 +1,7 @@
 import React from 'react'
-import preloader from '../asset/preloader.mp4'
+// import preloader from '../asset/preloader.mp4'
+import preloader from '../asset/p2.mp4'
+
 
 function Loader() {
   return (
